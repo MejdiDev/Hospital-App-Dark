@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #55BED2;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 4px rgb(0 0 0 / 50%);
+    box-shadow: 0 0 4px rgb(0 0 0 / 50%);
+}
+
+::-webkit-scrollbar-track {
+    background: #121829;
+}
+
+body {
+    background: #2F2C53;
+    color: #F2F2F2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: 'Exo', sans-serif;
+}
+
+input {
+    font-family: 'Exo', sans-serif;
+}
+
+#floatingwrapper {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 300ms ease-in-out;
+    z-index: 999;
+
+    &.active {
+        display: flex;
+    }
+}
+
+.formWrapperWindow {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#floatingwrapper form {
+    width: 100%;
+}
+
+.formWrapperWindow .buttonWrapper {
+    gap: 20px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-family: 'Exo', sans-serif;
+}
+
+.formWrapperWindow h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.formWrapperWindow {
+    border-radius: 10px;
+    padding: 30px 40px;
+    width: 30%;
+    background: #3E3B64;
+    display: none;
+}
+
+#floatingwrapper input {
+    width: calc(100% - 17px);
+    border: none !important;
+    outline: none !important;
+    margin: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    height: 35px;
+    font-size: 18px;
+}
+
+#floatingwrapper .buttonWrapper {
+    margin-top: 10px;
+}
+
+#floatingwrapper .buttonWrapper p, #floatingwrapper .buttonWrapper button {
+    height: 30px;
+    border-radius: 8px;
+    background: #55BED2;
+    width: 100px;
+    border: none !important;
+    outline: none !important;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    font-family: 'Exo', sans-serif;
+    cursor: pointer;
+    filter: brightness(1);
+    transition: filter 200ms;
+    justify-content: center;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+#floatingwrapper .buttonWrapper button {
+    padding: 20px 25px !important;
+}
+
+#floatingwrapper .buttonWrapper p:hover, #floatingwrapper .buttonWrapper button:hover {
+    filter: brightness(.8);
+}
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
+main #sidebar {
+    height: 100%;
+    width: 20vw;
+    background: #1A1741;
+    border-right: #1A1741 1px solid;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+main #container {
+    height: 100%;
+    width: 100%;
+}
+
+main #search {
+    padding: 0 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main #search #inputWrapper img {
+    margin-right: 20px;
+}
+
+main #search #inputWrapper {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: #3E3B64;
+    border-radius: 5px;
+}
+
+main #search input {
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 18px;
+    color: #F2F2F2;
+}
+
+main #search #inputWrapper img {
+    height: 23px;
+}
+
+main #search input::placeholder {
+    color: #F2F2F2;
+}
+
+main #search input:focus {
+    outline: none !important;
+}
+
+main #search #buttonWrapper {
+    background: transparent;
+    border: 2px #55BED2 solid;
+    display: flex;
+    align-items: center;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    gap: 10px;
+    cursor: pointer;
+    height: 40px;
+    transition: background 200ms, color 200ms;
+}
+
+main #search #buttonWrapper:hover {
+    background: #55BED2;
+}
+
+main #search #buttonWrapper:hover p {
+    color: #fff;
+}
+
+main #search #buttonWrapper:hover svg path {
+    fill: #FFFFFF;
+}
+
+main #search #buttonWrapper p {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: #55BED2;
+    font-weight: 700;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+main #search #buttonWrapper svg path {
+    fill: #55BED2;
+}
+
+main #container {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+main #container table {
+    border-collapse:separate;
+    border-spacing: 0 1em;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main #container table tr {
+    height: 40px;
+}
+
+main #container table td:first-child {
+    padding-left: 50px;
+}
+
+main #container table thead td:last-child {
+    text-align: center;
+}
+
+main #container table td:last-child {
+    height: 80px !important;
+}
+
+main #container table thead td {
+    height: auto !important;
+}
+
+main #container table td button {
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 40px;
+    cursor: pointer;
+}
+
+main #container table td button img {
+    height: 40px;
+}
+
+main #container table tr:nth-child(odd) {
+    background: #4D4B6C;
+}
+
